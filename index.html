@@ -1,0 +1,108 @@
+<!doctype html>
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com.">
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+   <link href="css/impress-demo.css" rel="stylesheet" />
+</head>
+<body>
+
+  <div id="impress" class="impress-not-supported">
+
+    <div class="fallback-message">
+      <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+      <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+      <span class="try">Let's make</span>
+      <h1>ScreenCast</h1>
+      <span class="footnote"><sup>*</sup> Terry Tai</span>
+    </div>
+
+    <div id="big" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+      <p> The most important questions:</p> 
+      <p><b>What?</b></p>
+      <p><b>How?</b></p>
+    </div>
+
+    <div id="tiny" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
+      <p>railscasts.com</p>
+      <p>destroyallsoftware.com</p>
+      <p>vimcasts.org</p>
+      <p>emacsrocks.com</p>
+      <img src="http://emacsrocks.com/images/emacs-rocks-logo.png">
+    </div>
+
+
+    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+      <p> What's <b>more?</b></p>
+    </div>
+
+    <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
+      <p><b class="positioning">peepcode</b>, <b class="rotating">pragprog,</b> <b class="scaling">codeschool</b> 
+      and <b class="rotating">udemy</b></p>
+    </div>
+
+    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
+      <p>Pick the <b>fields</b> you are <b class="imagination">familary</b> with</p>
+    </div>
+
+    <div class="step" data-x="6300" data-y="2000" data-rotate="200" data-scale="3">
+      <p>Now, let's talk about <br />
+      <b>How?</b>
+      <img src="http://1.bp.blogspot.com/-MRqGg2xypPM/TdGnDWe7NjI/AAAAAAAAAWQ/fdrpu9eKqNs/s1600/RecordingSign-794437.JPG">
+      </p>
+    </div>
+
+    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+      <p><span class="have">Thanks</span> <span class="you">for</span> <span class="noticed">watching</span> <span class="its">!</span></p>
+      <span class="footnote">* Terry Tai</span>
+    </div>
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+  </div>
+
+  <!--
+
+  Hint is not related to impress.js in any way.
+
+  But it can show you how to use impress.js features in creative way.
+
+  When the presentation step is shown (selected) it's element get's the class of "active" and `#impress` root
+  element get's the class based on active step id `step-ID` (where ID is the step id)... It probably is not
+  so clear because of all these IDs in here, so for example when the first step (the one with id of `bored`)
+  is active, `#impress` element get a class of `step-bored`.
+
+  This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation.
+
+  -->
+  <div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+  </div>
+
+
+  <!--
+
+  Last, but not least.
+
+  To make all described above really work, you need to include impress.js in the page.
+  And you should do it in the end of your document. Not only because it's a good practice, but also
+  because I was lazy, haven't wrapped the code in any kind of "DOM ready" event, so it will not work
+  if included too early in the source ;)
+
+  -->
+  <script src="js/impress.js"></script>
+
+</body>
+</html>

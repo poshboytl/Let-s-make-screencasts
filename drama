@@ -1,0 +1,64 @@
+(Railscasts China 第二期真实剧本)
+
+1.  rails g model user login:string hashed_password:string salt:string
+
+2. def password
+    @password
+  end
+
+  def password=(pass)
+    @password = pass
+    return if pass.blank?
+    generate_password(pass)
+  end
+
+3.def generate_password(pass)
+    salt = Array.new(6){rand(1024).to_s(36)}.join
+    self.usr_password_salt, self.usr_encrypted_password =
+      salt, Digest::SHA256.hexdigest(pass + salt)
+  end
+
+4.在shell里创建用户
+
+5. 
+def self.authentication(login, password)
+    user = User.find_by_name(name)
+    if !!user && Digest::SHA256.hexdigest(password + user.salt) == user.hashed_password
+      return user
+    end
+    false
+  end
+
+6. rails g controller sessions
+
+7. 添加路由
+
+8. 添加 new页面
+
+<h1>Blog Login</h1>
+<%= form_tag sessions_path do -%>
+  <label for="name">Name</label>
+  <%= text_field_tag :name, params[:name] %>
+  <label for="password">Password</label>
+  <%= password_field_tag :password, params[:password], { :class => "text" } %>
+ 
+  <%= submit_tag "Login"%>
+<% end -%>
+
+
+9. 添加 new action
+
+10. 添加 create action
+
+  def create
+    @user = User.authentication(params[:name], params[:password])
+    if @user
+      session[:user_id] = @user.id
+      flash[:notice] = "Welcome come #{@user.name}!"
+      redirect_to posts_path
+    else
+      flash[:notice] = "Name or password is not correct."
+      redirect_to new_session_path
+    end
+  end
+

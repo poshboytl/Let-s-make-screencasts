@@ -1,1 +1,34 @@
 The Slides for Teahour in Intridea to tell pepole how to make screencasts.
+
+Part I: Please open the index.html in your browser.
+
+Part II:
+
+1. 工具的选择：
+录制工具：
+  1) ScreenFlow（集成编辑功能，能录系统声音，视频和摄像头）
+  2) iShowU (Pro)
+剪辑工具：
+  1) iMove
+  2) Final Cut Pro （贵, 有一定的学习成本）
+
+现实案件工具：
+  Keycastr
+
+转码工具：
+  Miro Video Converter
+
+2. 制作剧本（附第二期真实剧本）
+example:
+  1) 如何做登陆
+  2) 如何试用gem做验证码
+  3) 如何通过第三方service做登陆
+  4) 如何升级你的东东到某一个版本
+
+3. 录制注意事项：
+1) 切忌不要只打代码不做解释，一定边打边说然后解释原因
+2）保持录制时的工作方式和你平常的工作方式一致
+3) 在呈现一个最佳实践的之前，最好把不那么好的实践做一次。然后再做更正
+4) 尽量做到重力的看待和分析问题 (虽然这很难)
+5）如果能略微有点幽默感那当然是更好的
+6) 不要过分的依赖后期处理
